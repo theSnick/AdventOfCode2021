@@ -1,0 +1,14 @@
+{
+  "name": "day-1",
+  "version": "1.0.0",
+  "description": "Advent Of Code 2021 Day 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --silent=false --verbose"
+  },
+  "author": "Nicole Norman",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.3"
+  }
+}
