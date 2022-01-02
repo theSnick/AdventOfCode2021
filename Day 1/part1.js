@@ -1,8 +1,8 @@
-function depthCheck() {
+function depthCheck(input) {
   let depthInc = 0;
   let prevDepth = null;
   let currDepth = null;
-  const data = readFile();
+  const data = readFile(input);
 
   const depth = data.split("\n");
 
@@ -19,17 +19,17 @@ function depthCheck() {
   return depthInc;
 }
 
-function readFile() {
+function readFile(input) {
   const fs = require('fs')
 
   try {
-    const data = fs.readFileSync('./input.txt', 'utf8');
+    const data = fs.readFileSync(input, 'utf8');
     return data;
   } catch (err) {
     return err;
   }
 }
 
-console.log(depthCheck());
+console.log(depthCheck('./input.txt'));
 
 module.exports = depthCheck;
