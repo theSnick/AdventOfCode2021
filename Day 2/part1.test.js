@@ -3,9 +3,13 @@ const horizontalPos = part1.posMethod;
 const readFile = part1.fileMethod;
 
 test('successful file read', () => {
-  expect(readFile()).toBeDefined();
+  expect(readFile('./test-input.txt')).toBeDefined();
 });
 
 test('is defined', () => {
-  expect(horizontalPos()).toBeDefined();
+  expect(horizontalPos('./test-input.txt')).toBeDefined();
+});
+
+test('test example input', () => {
+  expect(horizontalPos('./test-input.txt')).toEqual(150);
 });

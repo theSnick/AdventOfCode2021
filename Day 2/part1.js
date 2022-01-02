@@ -1,6 +1,7 @@
-function horizontalPos() {
-  const data = readFile();
+function horizontalPos(input) {
+  const data = readFile(input);
   const line = data.split("\n");
+
   let horizontal = 0;
   let vertical = 0;
 
@@ -18,18 +19,18 @@ function horizontalPos() {
   return horizontal*vertical;
 }
 
-function readFile() {
+function readFile(input) {
   const fs = require('fs')
 
   try {
-    const data = fs.readFileSync('./input.txt', 'utf8');
+    const data = fs.readFileSync(input, 'utf8');
     return data;
   } catch (err) {
     return err;
   }
 }
 
-console.log(horizontalPos());
+console.log(horizontalPos('./input.txt'));
 
 module.exports = {
   posMethod: horizontalPos,
